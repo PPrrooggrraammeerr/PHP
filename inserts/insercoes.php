@@ -99,7 +99,7 @@ $charset = 'utf8mb4';
 $dsn = "mysql:host=$host;dbname=$database;charset=$charset";
 
 $options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+	PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false,
 ];
@@ -108,24 +108,24 @@ $pdo = new PDO($dsn, $user, $password, $options);
 
 if (isset ($_POST['inserir'])) {
 	
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $comentario = $_POST['comentario'];
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$comentario = $_POST['comentario'];
 	
-    $inserir_valores = 'INSERT INTO feedbacks (nome, email, comentario) VALUES (:nome, :email, :comentario)';
-    $stmt = $pdo->prepare($inserir_valores);
+	$inserir_valores = 'INSERT INTO feedbacks (nome, email, comentario) VALUES (:nome, :email, :comentario)';
+	$stmt = $pdo->prepare($inserir_valores);
 	
-    $stmt->bindValue(':nome', $nome);
-    $stmt->bindValue(':email', $email);
-    $stmt->bindValue(':comentario', $comentario);
+	$stmt->bindValue(':nome', $nome);
+	$stmt->bindValue(':email', $email);
+	$stmt->bindValue(':comentario', $comentario);
 	
     $result = $stmt->execute();
 
-    if ($result) {
-	echo '<script> alert("Insert successful!") </script>';
-    } else {
-	echo '<script> alert("Insert not successful") </script>';
-    }
+	if ($result) {
+		echo '<script> alert("Insert successful!") </script>';
+	} else {
+		echo '<script> alert("Insert not successful") </script>';
+	}
 	
 }
 
