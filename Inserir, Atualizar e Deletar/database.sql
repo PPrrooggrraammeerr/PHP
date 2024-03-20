@@ -1,0 +1,9 @@
+CREATE DATABASE login;
+
+USE login;
+
+CREATE TABLE usuarios (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(256),
+	senha VARCHAR(256)
+);
