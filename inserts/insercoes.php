@@ -68,7 +68,7 @@
 	</style>
 </head>
 <body>
-    <form method="POST">
+    <form action="insercoes.php" method="POST">
 		<h2>Inserções</h2>
 		<hr>
 		<br>
