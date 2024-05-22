@@ -106,7 +106,7 @@ $options = [
 
 $pdo = new PDO($dsn, $user, $password, $options);
 
-if (isset ($_POST['inserir'])) {
+if (isset($_POST['inserir'])) {
 	
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
