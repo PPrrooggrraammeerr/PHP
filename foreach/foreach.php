@@ -36,7 +36,7 @@ foreach ($peopleAll as $peopleQuery) {
 if (isset($personsAll)) {
 	
 	foreach ($personsAll as $peopleQuery) {
-		echo "<script> alert ('{$peopleQuery} has already been inserted into the database') </script>";
+		echo "<script> alert('{$peopleQuery} has already been inserted into the database') </script>";
 	}
 	
 }
@@ -52,7 +52,7 @@ if (empty($personsAll)) {
 		
 		$stmt->execute();
 
-		echo "<script> alert ('{$peopleInsert} has been inserted the database') </script>";
+		echo "<script> alert('{$peopleInsert} has been inserted the database') </script>";
 
 	}
 	
