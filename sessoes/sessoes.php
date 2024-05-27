@@ -25,7 +25,7 @@ if (isset($_POST['email_session'], $_POST['senha_session'])) {
 
     ];
 	
-	$user_three = [
+	$user_four = [
 
         'email_armazenado' => 'email_four@email.com',
         'senha_armazenada' => 'senha_four' 
