@@ -93,25 +93,15 @@ $siglas_estados_brasileiros = [
                 <th>Sigla</th>
                 <th>Estado</th>
             </tr>
+            <?php foreach ($estados_brasileiros as $key => $estado_brasileiro) {
+            ?>
             <tr>
-                <td>
-                <hr>
-                <?php foreach ($estados_brasileiros as $key => $estado_brasileiro) {
-                    echo $key;
-                    echo '<hr>';
-                }
-                ?>
-                </td>
-                <td>
-                <hr>
-                <?php
-                foreach ($siglas_estados_brasileiros as $key => $siglas_estado_brasileiro) {
-                    echo $key;
-                    echo '<hr>';
-                }
-                ?>
-                </td>
+                <td><?php echo $key;?></td>
+                <td><?php echo $estado_brasileiro;?></td>
             </tr>
+            <?php
+            }
+            ?>
         </table>
         </div>
         <div>
@@ -120,26 +110,15 @@ $siglas_estados_brasileiros = [
                 <th>Estado</th>
                 <th>Sigla</th>
             </tr>
+            <?php foreach ($siglas_estados_brasileiros as $key => $sigla_estado_brasileiro) {
+            ?>
             <tr>
-                <td>
-                <hr>
-                <?php
-                foreach ($siglas_estados_brasileiros as $key => $sigla_estado_brasileiro) {
-                    echo $key;
-                    echo '<hr>';
-                }
-                ?>
-                </td>
-                <td>
-                <hr>
-                <?php 
-                foreach ($estados_brasileiros as $key => $estado_brasileiro) {
-                    echo $key;
-                    echo '<hr>';
-                }
-                ?>
-                </td>
+                <td><?php echo $key;?></td>
+                <td><?php echo $sigla_estado_brasileiro;?></td>
             </tr>
+            <?php
+            }
+            ?>
         </table>
         </div>
     </div>
